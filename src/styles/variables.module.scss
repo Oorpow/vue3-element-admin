@@ -1,0 +1,5 @@
+// 确保ts中能够使用scss全局变量
+
+:export {
+    bgColor: $primary-bg-color
+}
