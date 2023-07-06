@@ -2,10 +2,8 @@
 
 <template>
   <div>
-    app-main
+    <RouterView />
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

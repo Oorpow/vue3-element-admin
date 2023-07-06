@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Sidebar from './components/Sidebar/index.vue'
-import Navbar from './components/Navbar/index.vue'
-import AppMain from './components/AppMain.vue'
+import Sidebar from "./components/Sidebar/index.vue";
+import Navbar from "./components/Navbar/index.vue";
+import AppMain from "./components/AppMain.vue";
 </script>
 
 <template>
@@ -17,6 +17,4 @@ import AppMain from './components/AppMain.vue'
   </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
