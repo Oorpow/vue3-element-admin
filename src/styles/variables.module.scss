@@ -1,5 +1,6 @@
-// 确保ts中能够使用scss全局变量
-
+// 导出 variables.module.scss 变量提供给TypeScript使用
 :export {
-    bgColor: $primary-bg-color
+  // menuBg: $menuBg;
+  // menuText: $menuText;
+  // menuActiveText: $menuActiveText;
 }
