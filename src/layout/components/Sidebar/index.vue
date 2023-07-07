@@ -9,7 +9,7 @@ const routeList = permissionStore.routes.filter((route) => route.path !== "/logi
 <template>
   <div class="sidebar-container">
     <ElScrollbar height="98vh">
-      <ElMenu :collapse="false" :unique-opened="false" :collapse-transition="false" mode="vertical">
+      <ElMenu :collapse="false" unique-opened router>
         <SidebarItem v-for="route in routeList" :key="route.path" :item="route" :base-path="route.path" />
       </ElMenu>
     </ElScrollbar>

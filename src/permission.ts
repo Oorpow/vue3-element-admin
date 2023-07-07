@@ -1,9 +1,13 @@
-import router from "./router";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
+import router from "./router";
 
 import { usePermissionStoreHook } from "./stores/modules/permission";
 import { useUserStoreHook } from "./stores/modules/user";
+
+NProgress.configure({
+  showSpinner: false,
+});
 
 const permissionStore = usePermissionStoreHook();
 

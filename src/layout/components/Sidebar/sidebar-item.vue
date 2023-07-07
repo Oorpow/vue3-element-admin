@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { RouteRecordRaw } from "vue-router";
 
 type Props = {
@@ -7,14 +8,18 @@ type Props = {
 };
 
 const props = defineProps<Props>();
-console.log(props.item, props.basePath);
+
+const formatPrimaryRoute = (parentPath: string) => {
+  if (parentPath === "/") return parentPath;
+  return parentPath + "/";
+};
 </script>
 
 <template>
   <div>
     <!-- NOTE: 存在子路由的情况 -->
     <template v-if="item.children">
-      <ElSubMenu index="1">
+      <ElSubMenu :index="item.path">
         <template #title>
           <span>{{ item.meta?.title }}</span>
         </template>
@@ -22,7 +27,9 @@ console.log(props.item, props.basePath);
         <template v-for="childRoute in item.children" :key="childRoute.path">
           <!-- 只有一层子路由 -->
           <el-menu-item-group>
-            <el-menu-item index="1-2">{{ childRoute.meta?.title }}</el-menu-item>
+            <el-menu-item :index="formatPrimaryRoute(item.path) + childRoute.path">{{
+              childRoute.meta?.title
+            }}</el-menu-item>
           </el-menu-item-group>
           <!-- 存在三级或更多级路由 -->
           <template v-if="childRoute.children">
