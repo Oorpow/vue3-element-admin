@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Expand } from '@element-plus/icons-vue'
-import FullScreenItem from './components/FullScreenItem.vue'
-import LangSelectItem from './components/LangSelectItem.vue'
-import UserProfileItem from './components/UserProfileItem.vue'
+import FullScreenItem from "./components/FullScreenItem.vue";
+import LangSelectItem from "./components/LangSelectItem.vue";
+import UserProfileItem from "./components/UserProfileItem.vue";
+import CollapseItem from "./components/CollapseItem.vue";
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import UserProfileItem from './components/UserProfileItem.vue'
   <div class="navbar">
     <div class="flex justify-between">
       <!-- 侧边栏收缩 -->
-      <ElIcon><Expand /></ElIcon>
+      <CollapseItem />
       <!-- 右侧导航 -->
       <div class="flex gap-3 items-center">
         <!-- 全屏 -->
@@ -24,6 +24,4 @@ import UserProfileItem from './components/UserProfileItem.vue'
   </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
